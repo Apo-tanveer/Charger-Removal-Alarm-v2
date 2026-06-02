@@ -10,14 +10,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <WarningLevel>0</WarningLevel>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
     <PublishReadyToRun>true</PublishReadyToRun>
   </PropertyGroup>
 
-  <!-- Only compile MacProgram.cs, exclude Windows Program.cs -->
   <ItemGroup>
-    <Compile Remove="Program.cs" />
     <Compile Include="MacProgram.cs" />
   </ItemGroup>
 
