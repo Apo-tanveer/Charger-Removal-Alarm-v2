@@ -18,7 +18,11 @@
     <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
   </PropertyGroup>
 
-  <!-- Copy icon.ico next to the published exe so the app can load it at runtime -->
+  <!-- Only compile Program.cs, exclude MacProgram.cs -->
+  <ItemGroup>
+    <Compile Remove="MacProgram.cs" />
+  </ItemGroup>
+
   <ItemGroup>
     <None Update="icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

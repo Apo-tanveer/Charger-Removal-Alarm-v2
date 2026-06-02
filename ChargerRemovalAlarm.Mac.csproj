@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>App</OutputType>
+    <OutputType>Exe</OutputType>
     <TargetFramework>net10.0</TargetFramework>
     <RuntimeIdentifier>osx-x64</RuntimeIdentifier>
     <AssemblyName>ChargerRemovalAlarm</AssemblyName>
@@ -13,12 +13,13 @@
     <PublishSingleFile>true</PublishSingleFile>
     <SelfContained>true</SelfContained>
     <PublishReadyToRun>true</PublishReadyToRun>
-    <!-- macOS app bundle settings -->
-    <CFBundleName>Charger Removal Alarm</CFBundleName>
-    <CFBundleIdentifier>com.tanveer.chargerremovalalarm</CFBundleIdentifier>
-    <CFBundleVersion>1.0</CFBundleVersion>
-    <CFBundleShortVersionString>1.0</CFBundleShortVersionString>
   </PropertyGroup>
+
+  <!-- Only compile MacProgram.cs, exclude Windows Program.cs -->
+  <ItemGroup>
+    <Compile Remove="Program.cs" />
+    <Compile Include="MacProgram.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="11.1.0" />
