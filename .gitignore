@@ -1,0 +1,16 @@
+# Build outputs
+bin/
+obj/
+
+# User-specific files
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+# Visual Studio Code
+.vscode/
+
+# System / OS files
+.DS_Store
+Thumbs.db
